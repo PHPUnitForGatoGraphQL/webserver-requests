@@ -8,7 +8,7 @@ namespace PHPUnitForGatoGraphQL\WebserverRequests;
  * Test that enabling/disabling a plugin does not affect
  * the response of the query.
  */
-abstract class AbstractEnableDisablePluginSameResponseFixturePluginDependencyWordPressAuthenticatedUserWebserverRequestTest extends AbstractFixtureThirdPartyPluginDependencyWordPressAuthenticatedUserWebserverRequestTestCase
+abstract class AbstractEnableDisablePluginSameResponseFixturePluginDependencyWordPressAuthenticatedUserWebserverRequestTestCase extends AbstractFixtureThirdPartyPluginDependencyWordPressAuthenticatedUserWebserverRequestTestCase
 {
     /**
      * The response before/after must be the same.
@@ -19,7 +19,7 @@ abstract class AbstractEnableDisablePluginSameResponseFixturePluginDependencyWor
      * @param array<string,array<string,mixed>> $pluginEntries
      * @return array<string,array<string,mixed>>
      */
-    protected function customizePluginNameEntries(array $pluginEntries): array
+    protected static function customizePluginNameEntries(array $pluginEntries): array
     {
         $pluginEntries = parent::customizePluginNameEntries($pluginEntries);
         foreach ($pluginEntries as $pluginName => &$pluginEntry) {
